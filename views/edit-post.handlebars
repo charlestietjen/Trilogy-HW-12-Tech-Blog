@@ -1,0 +1,11 @@
+<section class="container">
+    <h3 class="subtitle is-size-4">Edit Post</h3>
+    <div class="box container">
+        <input id="post-title" name="post-title" type="text" class="input" value="{{post.title}}" />
+        <div class="content">
+            <textarea name="post-body" class="textarea">{{post.body}}</textarea>
+            <button class="button m-1 is-success" id="edit-submit-btn">Submit</button><a href="/dashboard" class="m-1 button is-danger">Cancel</a>
+        </div>
+    </div>
+</section>
+<script src="/javascript/editPost.js"></script>
