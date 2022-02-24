@@ -1,0 +1,22 @@
+{{!-- <div class="content post">
+    <h1 class="title">
+        {{title}}
+    </h1>
+    <div class="meta">
+        {{user.username}} on {{format_date created_at}}
+        |
+        {{comments.length}} {{format_plural "comment" comments.length}}
+    </div>
+</div> --}}
+
+<div class="box m-4 px-6">
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="content">
+        {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="content">
+        {{comments.length}} {{format_plural 'comment' comments.length}}
+    </div>
+</div>
