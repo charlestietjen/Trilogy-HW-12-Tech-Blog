@@ -1,9 +1,9 @@
 <div class="container comments">
     {{#each this}}
     <div class="box">
+        <h4 class="subtitle is-size-5">{{user.username}}</h4>
+        <p class="content">{{body}}</p>
         <div class="tag">{{format_time created_at}} on {{format_date created_at}}</div>
-        <h4>{{user.username}}</h4>
-        <p>{{body}}</p>
     </div>
     {{/each}}
 </div>
