@@ -1,0 +1,20 @@
+<div class="columns">
+    <div id="update-information" class="column is-one-quarter">
+
+    </div>
+    <div id="my-posts" class="column">
+        <ul class="posts">
+            {{#each posts as |post|}}
+            <li>
+                <div class="box m-4 px-6">
+                    {{> post-info post }}
+                    <div class="content">
+                       <a href="/dashboard/edit/{{post.id}}" class="button is-success">Edit Post</a>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+

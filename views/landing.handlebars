@@ -1,10 +1,14 @@
 <div class="columns">
-    <div class="column is-one-third"></div>
-    <ul class="posts">
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post }}
-        </li>
-        {{/each}}
-    </ul>
+    <div class="column is-one-quarter"></div>
+    <div class="column is-half">
+        <ul class="posts">
+            {{#each posts as |post|}}
+            <li>
+                <div class="box m-4 px-6">
+                    {{> post-info post }}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </div>

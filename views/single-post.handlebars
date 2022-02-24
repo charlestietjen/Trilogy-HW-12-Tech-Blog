@@ -1,0 +1,11 @@
+<section class="container m-6">
+    <div class="tag">{{format_date post.created_at}} by {{post.user.username}}</div>
+    <h1 class="title">{{post.title}}</h1>
+    <div class="content">
+        <p>{{post.body}}</p>
+    </div>
+</section>
+<section class="container">
+    <h3 class="subtitle">Comments</h3>
+    {{>comments post.comments}}
+</section>

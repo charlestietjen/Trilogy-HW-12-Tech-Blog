@@ -8,5 +8,8 @@ module.exports = {
         }
 
         return word;
+    },
+    format_time: time => {
+        return `${new Date(time).getHours()}:${new Date(time).getMinutes()}`;
     }
 };

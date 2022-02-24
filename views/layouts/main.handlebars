@@ -9,20 +9,20 @@
 </head>
 <body>
     <section class="hero is-success is-small">
-        <nav class="navbar">
-            <a href="/" class="navbar-item">Home</a>
-            {{#if loggedIn}}<a href="/dashboard" class="navbar-item">Dashboard</a><a id="logout" class="navbar-item">Logout</a>
-            {{else}}<a href="/login" class="navbar-item">Login</a><a href="/login" class="navbar-item">Sign Up</a>
-            {{/if}}
-            </nav>
         <div class="hero-body has-text-centered">
-            <p class="title">
+            <p class="title is-size-1">
                 The Shrech Zone
             </p>
             <p class="subtitle">
                 The misleading tech zone
             </p>
         </div>
+        <nav class="navbar is-flex is-flex-direction-row">
+            <a href="/" class="navbar-item m-1">Home</a>
+            {{#if loggedIn}}<a href="/dashboard" class="navbar-item m-1">Dashboard</a><a id="logout" class="navbar-item m-1">Logout</a>
+            {{else}}<a href="/login" class="navbar-item m-1">Login</a><a href="/login" class="navbar-item m-1">Sign Up</a>
+            {{/if}}
+            </nav>
     </section>
     <main>
         {{{ body }}}
