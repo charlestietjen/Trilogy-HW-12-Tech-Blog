@@ -1,15 +1,17 @@
 <div class="columns">
     <div id="update-information" class="column is-one-quarter">
-
+        <div class="content m-3 is-flex is-flex-direction-column is-justify-content-center">
+            <a href="/dashboard/add-post" class="button is-link">New Post</a>
+        </div>
     </div>
     <div id="my-posts" class="column">
         <ul class="posts">
             {{#each posts as |post|}}
             <li>
                 <div class="box m-4 px-6">
-                    {{> post-info post }}
+                    {{>post-info post }}
                     <div class="content">
-                       <a href="/dashboard/edit/{{post.id}}" class="button is-success">Edit Post</a>
+                       <a href="/dashboard/edit/{{post.id}}" class="button is-link content mx-1">Edit Post</a><button id="delete-btn" data-post-id="{{post.id}}" class="button is-danger content mx-1">Delete Post</button>
                     </div>
                 </div>
             </li>
@@ -17,4 +19,4 @@
         </ul>
     </div>
 </div>
-
+<script src="/javascript/deletePost.js"></script>

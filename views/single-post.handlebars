@@ -7,10 +7,13 @@
 </section>
 <section class="container">
     <h3 class="subtitle">Comments</h3>
-    <div class="content">
+    {{#if loggedIn}}<div class="content">
         <textarea class="textarea" name="comment-body" placeholder="Enter your comment..."></textarea>
         <button class="my-1 button is-success" id="comment-submit-btn">Submit</button>
     </div>
+    {{else}}
+        <a href="/login" class="button is-link content is-medium">Sign Up or Login to Comment on Posts</a>
+    {{/if}}
     {{>comments post.comments}}
 </section>
 <script src="/javascript/comment.js"></script>

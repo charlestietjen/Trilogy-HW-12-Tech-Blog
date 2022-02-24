@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
     Post.findAll({
         where: {
-            id: req.session.user_id
+            user_id: req.session.user_id
         },
         attributes: ['id', 'title', 'body', 'created_at'],
         include: {
@@ -22,7 +22,8 @@ router.get('/', (req, res) => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
         console.log(posts);
         res.render('dashboard', {
-            posts
+            posts,
+            loggedIn: true
         });
     })
     .catch(err => {
@@ -51,5 +52,11 @@ router.get('/edit/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
+router.get('/add-post', withAuth, (req, res) => {
+    res.render('add-post', {
+        loggedIn: true
+    })
+})
 
 module.exports = router;
